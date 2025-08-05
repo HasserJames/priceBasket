@@ -5,6 +5,7 @@ case class Basket(productsBasket: Map[Product, Int],
                   totalDiscounts: Double,
                   total: Double,
                   discountsList: List[String]) {
+  //method that prints the subtotal, discounts and Total
   def printTicket(): Unit = {
     //subtotal
     val subtotalCurrencyText = getAmountWithCurrency(subtotal)
@@ -20,7 +21,7 @@ case class Basket(productsBasket: Map[Product, Int],
 }
 
 object Basket {
-
+  //Basket constructor
   def apply(products: Array[String]): Basket = {
     val productsBasket = getBasket(products)
     val subtotal = getBasketSubtotal(productsBasket)
@@ -57,5 +58,4 @@ object Basket {
     val listDiscountsDone = Discounts.filter(_.DiscountValue > 0).map(_.DiscountDescription).toList
     (Discounts.map(_.DiscountValue).sum, listDiscountsDone)
   }
-
 }

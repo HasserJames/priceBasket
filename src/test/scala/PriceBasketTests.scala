@@ -2,7 +2,7 @@ import org.scalatest.funsuite.AnyFunSuite
 
 class PriceBasketTests extends AnyFunSuite {
   // these values are used for the configurable/scalable tests
-  val numApples = 100
+  val numApples = 101
   val listApples = List.fill(numApples)("Apples")
   val ApplesPrice = 100
   val AppleOffer = 0.9
@@ -47,7 +47,7 @@ class PriceBasketTests extends AnyFunSuite {
     assert(basketTotal == 0)
   }
 
-  test("configurable/scalable test for apples") {
+  test(s"configurable/scalable test for $numApples apples") {
     val ArrayProducts = listApples.toArray
     val basket = Basket(ArrayProducts)
     val basketSubtotal = basket.subtotal
@@ -55,7 +55,7 @@ class PriceBasketTests extends AnyFunSuite {
     assert(basketSubtotal == numApples * 100)
     assert(basketTotal == numApples * 90)
   }
-  test("configurable/scalable test for Milk") {
+  test(s"configurable/scalable test for $numMilk Milk") {
     val ArrayProducts = listMilk.toArray
     val basket = Basket(ArrayProducts)
     val basketSubtotal = basket.subtotal
@@ -64,7 +64,7 @@ class PriceBasketTests extends AnyFunSuite {
     assert(basketTotal == numMilk * 130)
   }
 
-  test("configurable/scalable test for Bread") {
+  test(s"configurable/scalable test for $numBread Bread") {
     val ArrayProducts = listBread.toArray
     val basket = Basket(ArrayProducts)
     val basketSubtotal = basket.subtotal
@@ -73,7 +73,7 @@ class PriceBasketTests extends AnyFunSuite {
     assert(basketTotal == numBread * 80)
   }
 
-  test("configurable/scalable test for Soup") {
+  test(s"configurable/scalable test for $numSoup Soup") {
     val ArrayProducts = listSoup.toArray
     val basket = Basket(ArrayProducts)
     val basketSubtotal = basket.subtotal
@@ -82,7 +82,7 @@ class PriceBasketTests extends AnyFunSuite {
     assert(basketTotal == numSoup * 65)
   }
 
-  test("configurable/scalable test for all products") {
+  test(s"configurable/scalable test for all products: $numApples apples, $numMilk Milk, $numBread Bread, $numSoup Soup") {
     val ArrayApples = listApples.toArray
     val ArrayMilk = listMilk.toArray
     val ArrayBread = listBread.toArray
