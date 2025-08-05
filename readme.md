@@ -2,9 +2,13 @@
 
 ## Pre-Requisites
 
-1.- SBT has to be installed
+The following tools must be installed:
 
-2.- JDK has to be installed
+1.- SBT
+
+2.- JDK
+
+3.- GIT
 
 Note: Both SBT and JDk can be downloaded from: https://www.scala-sbt.org/1.x/docs/es/Installing-sbt-on-Windows.html
 
@@ -13,6 +17,7 @@ Note: Both SBT and JDk can be downloaded from: https://www.scala-sbt.org/1.x/doc
 To run the program It is needed to compile It first
 
 1.- Please clone the project from github using command line:
+
 `git clone https://github.com/HasserJames/priceBasket.git`
 
 2.- Using comand line go to the folder priceBasket
@@ -37,9 +42,9 @@ There are 5 Configurable/Scalable Tests:
 
 3.- Configurable/scalable test for Z number of Bread
 
-4.- Configurable/scalable test for X number of Soup
+4.- Configurable/scalable test for W number of Soup
 
-5.- Configurable/scalable test for all products: X number of apples, Y number of Milk, Z number of Bread, Z number of Soup
+5.- Configurable/scalable test for all products: X number of apples, Y number of Milk, Z number of Bread, W number of Soup
 
 To change the number of any product just update the following variables in the file `src/test/scala/PriceBasketTests.scala`:
 
